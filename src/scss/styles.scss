@@ -1,7 +1,8 @@
-$color-font: #fff;
-$color-bg-default: #33f;
-$font-default: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 
+$color-font: #fff;
+$color-bg-default: #333;
+$font-default: 'Nunito', sans-serif;
 * {
     margin: 0;
     padding: 0;
@@ -11,12 +12,25 @@ $font-default: Arial, Helvetica, sans-serif;
 body {
     font-family: $font-default;
     margin: 0;
+    background-color: $color-bg-default;
 }
 
 h1 {
     color: $color-font;
     text-align: center;
     width: 100%;
+    color: #fff;
+    font-size: 40px;
+}
+h2 {
+    color: $color-font;
+    margin: 40px 0;
+}
+
+section {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #imagens {
@@ -24,8 +38,8 @@ h1 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        max-width: 100%;
-        margin: 0 auto;
+        max-width: 90%;
+        margin: 0 auto 50px;
         
         img {
             height: 200px;
@@ -33,11 +47,12 @@ h1 {
             margin: 5px;
             object-fit: fill;
             object-position: bottom;
-            border: 1px solid #333;
+            border: 2px solid #333;
+            border-radius: 8px;
 
             &:hover {
                 opacity: 75%;
-                border-color: #33f;
+                border: 2px solid #00d;
             }
         }
 
@@ -59,9 +74,9 @@ header {
 }
 
 .waves {
-    bottom: 0;
+    bottom: -5px;
     position: absolute;
-    left: 0;
+    left: -5px;
     right: 0;
     width: 110%;
 
@@ -74,10 +89,11 @@ header {
         animation: wave2 3s ease-in-out infinite alternate;
     }
 
+
     .wave-03 {
         animation: dash1 3s cubic-bezier(0, 1.23, 1, 0.11) infinite alternate;
         stroke-dasharray: 150;
-        stroke: #fff;
+        stroke: #00f;
         stroke-width: 3px;
     }
 }
